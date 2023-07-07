@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+
+<h1><%= title %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Amount</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% expenses.forEach(function(e) { %>
+      <tr>
+        <td><%= e.date %></td>
+        <td><%= e.description %></td>
+        <td>$<%= e.amount %></td>
+        <td>
+          <a href="/expenses/<%= e.id %>" role="button">Details</a>
+          <form class="delete-form">
+            <button>Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+
+<a href="/expenses/new">Add New Expense</a>
+
+<%- include('../partials/footer') %>

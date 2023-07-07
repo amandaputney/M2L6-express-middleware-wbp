@@ -1,0 +1,11 @@
+form.delete-form {
+  display: inline-block;
+  margin: 0;
+}
+
+form.delete-form button {
+  margin: 0;
+  color: black;
+  background-color: darkgrey;
+  border-color: grey;
+}

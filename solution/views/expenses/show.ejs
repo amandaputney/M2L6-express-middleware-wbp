@@ -1,0 +1,34 @@
+<%- include('../partials/header') %>
+
+<nav>
+  <ul>
+    <li><a href="/expenses">&lt; Back</a></li>
+  </ul>
+</nav>
+
+<h1>Expense Details</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <th><strong>Date</strong></th>
+      <td><%= expense.date %></td>
+    </tr>
+    <tr>
+      <th><strong>Description</strong></th>
+      <td><%= expense.description %></td>
+    </tr>
+    <tr>
+      <th><strong>Amount</strong></th>
+      <td>$<%= expense.amount %></td>
+    </tr>
+  </tbody>
+</table>
+
+<article>
+  <p>TODO: Someday put an image of the expense receipt here!</p>
+  <img src="/images/fake_receipt.gif" />
+</article>
+
+
+<%- include('../partials/footer') %>
