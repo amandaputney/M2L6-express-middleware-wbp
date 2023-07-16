@@ -1,6 +1,6 @@
 module.exports = {
   getAll,
-  getOne,
+  getOne, create
 };
 
 const expenses = [
@@ -32,3 +32,12 @@ function getOne(id) {
   id = parseInt(id);
   return expenses.find(e => e.id === id);
 }
+
+function create(expense) {
+  expense.id = Date.now() % 100000;
+  // expense.date = input;
+  // expense.description = input;
+  // expense.amount = input;
+  expenses.push(expense);
+
+};

@@ -1,7 +1,7 @@
 module.exports = {
   index,
   show,
-  new: newExpense
+  new: newExpense, create
 };
 
 const Expense = require('../models/expense');
@@ -17,6 +17,11 @@ function index(req, res) {
 
 function newExpense(req, res) {
   res.render('expenses/new', { title: 'New Expense' })
+};
+
+function create(req, res) {
+  Expense.create(req.body);
+  res.redirect('/expenses')
 };
 
 function show(req, res) {
