@@ -5,19 +5,19 @@ action, and method attributes of the <form> tag
   name attribute of the <input> tag
   type attribute of the <button> tag -->
 
-  <form autocomplete="off">
+  <form action="/expenses" method="POST" autocomplete="off">
 
     <label>Date</label>
-    <input type="text" placeholder="YYYY-MM-DD" required>
+    <input type="text" name="date" placeholder="YYYY-MM-DD" required>
 
     <label>Description</label>
-    <input type="text" placeholder="Short Description" required>
+    <input type="text" name="description" placeholder="Short Description" required>
 
     <label>Amount</label>
-    <input type="text" placeholder="X.XX" required>
+    <input type="text" name="amount" placeholder="X.XX" required>
     <small>Do not enter a $ Sign</small>
 
-    <button>Save Expense</button>
+    <button type="submit">Save Expense</button>
   </form>
 
   <%- include('../partials/footer') %>
