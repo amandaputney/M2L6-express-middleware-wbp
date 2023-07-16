@@ -1,18 +1,23 @@
 <%- include('../partials/header') %>
 
-<form autocomplete="off">
+  <!-- update:
+action, and method attributes of the <form> tag
+  name attribute of the <input> tag
+  type attribute of the <button> tag -->
 
-  <label>Date</label>
-  <input type="text" placeholder="YYYY-MM-DD" required>
+  <form autocomplete="off">
 
-  <label>Description</label>
-  <input type="text" placeholder="Short Description" required>
+    <label>Date</label>
+    <input type="text" placeholder="YYYY-MM-DD" required>
 
-  <label>Amount</label>
-  <input type="text" placeholder="X.XX" required>
-  <small>Do not enter a $ Sign</small>
+    <label>Description</label>
+    <input type="text" placeholder="Short Description" required>
 
-  <button>Save Expense</button>
-</form>
+    <label>Amount</label>
+    <input type="text" placeholder="X.XX" required>
+    <small>Do not enter a $ Sign</small>
 
-<%- include('../partials/footer') %>
+    <button>Save Expense</button>
+  </form>
+
+  <%- include('../partials/footer') %>
