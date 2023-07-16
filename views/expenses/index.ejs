@@ -26,8 +26,8 @@
           </td>
           <td>
             <a href="/expenses/<%= e.id %>" role="button">Details</a>
-            <form class="delete-form">
-              <button>Delete</button>
+            <form action="/expenses/<%= e.id %>?_method=DELETE" method="POST" class="delete-form">
+              <button type="submit">Delete</button>
             </form>
           </td>
         </tr>

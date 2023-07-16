@@ -1,7 +1,7 @@
 module.exports = {
   index,
   show,
-  new: newExpense, create
+  new: newExpense, create, delete: deleteExpense
 };
 
 const Expense = require('../models/expense');
@@ -31,3 +31,8 @@ function show(req, res) {
     expense
   });
 }
+
+function deleteExpense(req, res) {
+  Expense.deleteOne(req.params.id);
+  res.redirect('/expenses');
+};

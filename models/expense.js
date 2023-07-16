@@ -1,6 +1,6 @@
 module.exports = {
   getAll,
-  getOne, create
+  getOne, create, deleteOne
 };
 
 const expenses = [
@@ -39,5 +39,12 @@ function create(expense) {
   // expense.description = input;
   // expense.amount = input;
   expenses.push(expense);
+
+};
+
+function deleteOne(id) {
+  id = parseInt(id);
+  const idx = expenses.find(e => e.id === id);
+  expenses.splice(idx, 1);
 
 };
